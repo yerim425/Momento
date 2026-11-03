@@ -25,7 +25,10 @@ Momento는 Vanilla JavaScript로 제작한 심플한 To-Do List 웹페이지입�
 
 ## 화면 디자인
 
-[Momento Preview]\(./images/preview\.png)&#x20;
+<p>
+  <img src='./img/preview_01.png' width:'45%' margin-end:'5px'/>
+  <img src='./img/preview_02.png' width:'45%'/>
+</p>
 
 ## 제작 목표
 

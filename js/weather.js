@@ -4,14 +4,6 @@ const API_KEY = "b08f9115cfaa240cd5bc5836451f4f53";
 function onGeoOk(position){
     const lat = position.coords.latitude;
     const lng = position.coords.longitute;
-    console.log("You live in ", lat, lng);
-}
-function onGeoError(){
-    //alert("Can't find you. No weather for you.");
-
-    const lat = 37.5985;
-    const lng = 126.9783;
-
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`;
     fetch(url)
     .then(response => response.json())
@@ -23,6 +15,9 @@ function onGeoError(){
         city.innerHTML = `${data.name}, `;
 
     });
+}
+function onGeoError(){
+    alert("Can't find you.");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
